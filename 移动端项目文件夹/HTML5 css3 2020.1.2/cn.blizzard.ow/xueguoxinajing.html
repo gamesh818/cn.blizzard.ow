@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/normalize.css">
+    <link rel="stylesheet" href="./scss/xueguoxianjing.css">
+    <link rel="shortcut icon" href="ow.ico" type="image/x-icon">
+</head>
+<body id="body">
+    <!-- 顶部导航 -->
+    <header>
+        <a href="javascript:void(0);" id="header-leftbox-kai"></a> 
+        <a href="./index.html"><img src="./upload/header_cent.png" alt=""></a>
+        <a href="javascript:void(0);" id="header-rightbox-kai"></a>
+        <!-- 左隐藏盒子 -->
+        <div id="header-leftbox">
+            <img src="./upload/top_nav_img.png" alt="">
+            <!-- 关闭按钮 -->
+            <div id="header-leftbox-guan"></div>
+            <ul>
+                <li><a href="">首页</a></li>
+                <li><a href="">游戏</a></li>
+                <li><a href="">英雄</a></li>
+                <li><a href="">活动</a></li>
+                <li><a href="">视频图片</a></li>
+                <li><a href="">新闻</a></li>
+                <li><a href="">下载</a></li>
+                <li><a href="">电子竞技</a></li>
+                <li><a href="">社区</a></li>
+            </ul>
+            <button id="header-leftbox-guan-button">立即购买</button>
+            <div class="bottom-logo">
+                <img src="./upload/bottom-logo.png" alt="">
+            </div>
+        </div>
+        <!-- 右隐藏盒子 -->
+        <div id="header-rightbox">
+            <div id="header-rightbox-guan"></div>
+            <a href="./index.html" class="logolink"><span></span></a>
+            <div class="dengru-button"><button>登录</button></div>
+            <div class="zhanghu">
+                <a href=""><span></span> 支持</a>
+                <a href=""><span></span> 账户</a>
+                <a href=""><span></span> 注册</a>
+            </div>
+            <ul>
+                <li><a href="">首页</a> </li>
+                <li><a href="">游戏</a> </li>
+                <li><a href="">商城</a> </li>
+                <li><a href="">新闻</a> </li>
+                <li><a href="">电子竞技</a> </li>
+                <li><a href="">暴雪嘉年华</a> </li>
+            </ul>
+        </div>
+    </header>
+    <!-- 顶部隐藏盒子js -->
+    <script>
+        // 左盒子
+   var leftBox=document.getElementById("header-leftbox")
+        // 左盒子关闭按钮
+   var leftBoxGuanbi=document.getElementById("header-leftbox-guan")
+        // 左盒子开启按钮
+   var leftBoxKaiqi=document.getElementById("header-leftbox-kai")
+        // 右盒子
+   var rightBox=document.getElementById("header-rightbox")
+        // 右盒子关闭按钮
+   var rightBoxGuanbi=document.getElementById("header-rightbox-guan")
+        // 右盒子按钮
+   var rightBoxKaiqi=document.getElementById("header-rightbox-kai")
+   var body=document.getElementById("body")
+   leftBoxKaiqi.onclick =function() {
+    leftBox.style.left="0"
+    rightBox.style.right="-320px"
+    body.style.overflow="hidden"
+    // rightBox.style.display = "none"
+   }
+   leftBoxGuanbi.onclick=function(){
+    // leftBox.style.display= "none"
+    leftBox.style.left="-320px"
+    body.style.overflow="visible"
+   }
+   
+   rightBoxKaiqi.onclick =function() {
+    rightBox.style.right="0"
+    leftBox.style.left="-320px"
+    body.style.overflow="hidden"
+    // rightBox.style.display = "none"
+   }
+   rightBoxGuanbi.onclick=function(){
+       rightBox.style.right="-320px"
+       body.style.overflow="visible"
+   }
+    </script>
+    <!-- 顶部导航结束 -->
+
+    <!-- 底部条款 -->
+    <footer class="footer">
+        <div class="tiaokuan">
+        <a href="">隐私</a><i>|</i>
+        <a href="">法律条款</a><i>|</i>
+        <a href="">API</a>
+        </div>
+        <p>
+            ©2019 暴雪娱乐有限公司版权所有 由上海网之易网络科技发展有限公司运营 <a href=""> 著作权侵权</a> | 
+            新广出审[2016]378号        </p>
+        <p>文网游进字[2016]0025号  |  <a href="">沪网文号〔2017〕9633-727号</a> |  <a href="">增值电信业务经营许可证编号：沪B2－20080012</a> | 
+        <a href="">沪ICP备：沪B2－20080012</a></p>
+        <p>互联网违法和不良信息举报电话：0571-28090163 沪公网安备 31011502022167号 | <a href="">上海市网络游戏行业自律公约</a></p>
+        <div class="footer-bottom" >
+            <img src="./upload/foot-tiaokuan1.png" alt="">
+            <img src="./upload/foot-tiaokuan2.png" alt="">
+            <img src="./upload/foot-tiaokuan3.png" alt="">
+            <img src="./upload/foot-tiaokuan4.png" alt="">
+            <img src="./upload/foot-tiaokuan5.png" alt="">
+            <span>|  适龄提示：适合13岁及以上使用 <a href="">家长监护工程></a> </span>
+        </div>
+    
+    
+    </footer>
+
+    <script src="./js/flexible.debug.js"></script>
+    <script src="./js/flexible_css.debug.js"></script>
+
+</body>
+</html>
