@@ -1,0 +1,752 @@
+*img {
+  vertical-align: middle;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-size: 10px;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  background-color: #fff;
+  height: 48px;
+  width: 100%;
+  z-index: 1000;
+}
+
+header:after, header:before {
+  content: "";
+  display: table;
+}
+
+header:after {
+  clear: both;
+}
+
+header:after {
+  *zoom: 1;
+}
+
+header > a:nth-child(1) {
+  float: left;
+  width: 48px;
+  height: 48px;
+  background-image: url(../upload/header_left.jpg);
+}
+
+header > a:nth-child(2) {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+}
+
+header > a:nth-child(2) img {
+  width: 100%;
+  height: 100%;
+}
+
+header > a:nth-child(3) {
+  float: right;
+  width: 48px;
+  height: 48px;
+  background-image: url(../upload/jingling.png);
+  background-position: -186px -267px;
+}
+
+header #header-leftbox {
+  position: fixed;
+  left: -320px;
+  top: 0;
+  overflow: scroll;
+  width: 100%;
+  max-width: 320px;
+  height: 100vh;
+  background-color: #2f3543;
+  z-index: 1000;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+header #header-leftbox img {
+  width: 100%;
+  padding: 25px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header #header-leftbox #header-leftbox-guan {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  background: url(../upload/header-leftbox-guan.jpg);
+  background-size: 100%;
+}
+
+header #header-leftbox li {
+  border-top: 1px solid #444a56;
+}
+
+header #header-leftbox li a {
+  display: block;
+  padding: 18px 25px;
+  font-size: 16px;
+  color: #e0e1e3;
+}
+
+#header-leftbox-guan-button {
+  width: 100%;
+  margin-top: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #f7931e;
+  color: #fff;
+  font-size: 20px;
+  padding: 13px 0px;
+  font-weight: 400;
+  border: 0;
+}
+
+.bottom-logo {
+  display: inline-block;
+  width: 100px;
+  height: 50px;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 20px 0;
+}
+
+.bottom-logo img {
+  width: 100%;
+  height: 100%;
+  padding: 0 !important;
+}
+
+#header-rightbox {
+  position: fixed;
+  top: 0;
+  right: -320px;
+  width: 100%;
+  max-width: 320px;
+  height: 100vh;
+  overflow: scroll;
+  background-color: #151a23;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+#header-rightbox #header-rightbox-guan {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-image: url(../upload/jingling.png);
+  background-position: -96px -125px;
+  width: 23px;
+  height: 23px;
+  z-index: 2;
+}
+
+#header-rightbox .logolink {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 80px;
+}
+
+#header-rightbox .logolink span {
+  display: inline-block;
+  width: 90px;
+  height: 40px;
+  background-image: url(../upload/jingling.png);
+  background-position: -18px -17px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#header-rightbox .dengru-button {
+  padding: 20px 0;
+  width: 100%;
+  height: 40px;
+  border-top: 1px solid #252931;
+  background-color: #13171f;
+}
+
+#header-rightbox button {
+  width: 90%;
+  height: 40px;
+  border: 0;
+  background-color: #0e86ca;
+  color: #fff;
+  font-size: 16px;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  text-align: center;
+  line-height: 40px;
+}
+
+#header-rightbox li {
+  border-top: 1px solid #252931;
+}
+
+#header-rightbox li a {
+  display: block;
+  height: 44px;
+  padding: 0px 25px;
+  font-size: 16px;
+  color: #b9bbbd;
+  line-height: 44px;
+}
+
+.zhanghu {
+  width: 100%;
+}
+
+.zhanghu a {
+  display: block;
+  width: 100%;
+  height: 44px;
+  font-size: 16px;
+  color: #b9babc;
+  background-color: #13171f;
+  line-height: 44px;
+  border-top: 1px solid #252931;
+}
+
+.zhanghu a span {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(../upload/jingling.png) no-repeat;
+  background-position: -141px -72px;
+  vertical-align: middle;
+  margin-left: 15px;
+}
+
+main {
+  width: 100%;
+  background-color: #fff;
+}
+
+main h2 {
+  font-size: 31px;
+  text-align: center;
+  padding: 10px 0 25px;
+  font-style: italic;
+  color: #4b535d;
+}
+
+main h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #4b535d;
+  text-align: center;
+  padding: 5px 0;
+}
+
+main .top-img {
+  position: relative;
+  padding-top: 48px;
+  width: 100%;
+}
+
+main .top-img img {
+  width: 100%;
+}
+
+main .top-img a {
+  width: 56px;
+  height: 56px;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+main .logo {
+  width: 100%;
+  padding: 30px 15px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main .logo img {
+  width: 100%;
+}
+
+main .logo button {
+  width: 100%;
+  border: 0;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #ff9c00;
+}
+
+main .jiesuo {
+  width: 100%;
+  padding: 30px 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #f6f6f6;
+}
+
+main .jiesuo p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #212529;
+}
+
+main .jiesuo button {
+  width: 100%;
+  border: 3px solid #ff9c00;
+  color: #ff9c00;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: transparent;
+  padding: 7px 0;
+}
+
+main .luandou {
+  width: 100%;
+  background: url(../upload/xueguo-background.jpg);
+  background-position: top center;
+  padding: 10px 10px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main .luandou-moshi {
+  margin-bottom: 20px;
+}
+
+main .moshi-centen {
+  position: relative;
+  width: 100%;
+  background: url(../upload/xueguo-1.jpg);
+  padding-top: 50%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+main .moshi-centen span {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 13px;
+  border: 2px solid #e79b2a;
+  background-color: #293a51;
+  color: #ffe30b;
+  padding: 3px;
+}
+
+main .moshi-text {
+  padding: 25px;
+  background-color: #fff;
+}
+
+main .moshi-text p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.wupin {
+  width: 100%;
+}
+
+.wupin .wupin-img {
+  width: 100%;
+  background: url(../upload/xueguo-wupin1.jpg);
+  background-size: 150%;
+  background-position: top center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 55%;
+}
+
+.wupin .tiaozhan {
+  padding: 10px;
+  padding-top: 30px;
+}
+
+.wupin .tiaozhan > h4 {
+  padding: 0;
+  color: #539ee9;
+}
+
+.wupin .tiaozhan h2 {
+  padding-bottom: 10px;
+}
+
+.wupin .tiaozhan p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.tiaozhan-ri {
+  position: relative;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.tiaozhan-ri .time {
+  padding-top: 30px;
+}
+
+.tiaozhan-ri .time h4 {
+  display: inline-block;
+  padding-left: 20px;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.tiaozhan-ri .time span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: url(../upload/clock.png);
+}
+
+.tiaozhan-ri .time p {
+  text-align: center;
+}
+
+.wupin-shu .wupin-shu-ol {
+  margin: 25px 0;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.wupin-shu .wupin-shu-ol img {
+  width: 120px;
+  height: 120px;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.wupin-shu .wupin-shu-ol p {
+  text-align: center;
+}
+
+.xiala {
+  position: relative;
+  padding: 8px 12px;
+  background-color: #f2f2f2;
+}
+
+.xiala span {
+  font-size: 16px;
+  font-weight: 700;
+  color: #4a4a4a;
+}
+
+.xiala i {
+  position: absolute;
+  top: 30%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transform: rotate(224deg);
+          transform: rotate(224deg);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  right: 5%;
+  width: 10px;
+  height: 10px;
+  border-left: 2px solid #666666;
+  border-top: 2px solid #666666;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.jiangli {
+  width: 100%;
+  padding: 20px 10px;
+  background: url(../upload/jiangli-background.jpg);
+  background-position: top center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+}
+
+.jiangli h2 {
+  color: #ffffff;
+  padding-bottom: 10px;
+}
+
+.jiangli > h4 {
+  position: relative;
+  text-align: left;
+  padding-left: 30px;
+  color: #fff;
+  font-weight: 400;
+}
+
+.jiangli > h4 b {
+  color: #dc931d;
+  text-decoration: underline;
+}
+
+.jiangli > h4 span {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0;
+  width: 21px;
+  height: 21px;
+  background: url(../upload/xuehua.png) no-repeat;
+  background-size: cover;
+}
+
+.jiangli .xiala {
+  width: 75%;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.lunbo-centen {
+  display: -webkit-box;
+  width: 100%;
+  height: 160px;
+  padding: 10px 0;
+  overflow: scroll;
+  overflow-X: visible;
+  padding-left: 10px;
+}
+
+.lunbo-centen div {
+  width: 250px;
+  height: 140px;
+}
+
+.lunbo-centen a {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.lunbo-centen img {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.lunbo-centen span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 700;
+  text-align: center;
+  padding: 10px 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ff9c00;
+}
+
+.lunbo-centen > div:first-child {
+  padding-left: 0;
+}
+
+.lunbo-centen i {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 13px;
+  border: 2px solid #e79b2a;
+  background-color: #293a51;
+  color: #ffe30b;
+  padding: 3px;
+}
+
+.lunbo-centen b {
+  width: 100%;
+  height: 100%;
+  background: url(../upload/bofang1.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 13%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.lunbo {
+  width: 100%;
+  overflow: hidden;
+}
+
+.lunbo h4 {
+  color: #fff;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.lunbo > .lunbo-centen:first-child {
+  padding-left: 0;
+}
+
+.liwu {
+  background-color: #fff;
+  width: 100%;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.liwu img {
+  width: 100%;
+}
+
+.liwu .liwu-text {
+  width: 100%;
+}
+
+.liwu .liwu-text p {
+  font-size: 14px;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.liwu .liwu-text h2 {
+  padding: 20px 0 10px;
+}
+
+.liwu .liwu-text button {
+  width: 100%;
+  border: 0;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #ff9c00;
+  margin: 15px 0 10px;
+}
+
+.main-fenxiang {
+  border-top: 1px solid #2c2d2e;
+  border-bottom: 1px solid #2c2d2e;
+  width: 100%;
+  margin: 30px 0 0px 0;
+  background-color: #141516;
+}
+
+.main-fenxiang:after, .main-fenxiang:before {
+  content: "";
+  display: table;
+}
+
+.main-fenxiang:after {
+  clear: both;
+}
+
+.main-fenxiang:after {
+  *zoom: 1;
+}
+
+.main-fenxiang span {
+  float: right;
+  line-height: 64px;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.main-fenxiang a {
+  position: relative;
+  bottom: 50%;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  float: right;
+  width: 36px;
+  height: 32px;
+  background: url(../upload/fenxiang.png);
+  background-position: -3px -4px;
+  line-height: 64px;
+}
+
+.footer {
+  width: 100%;
+  padding: 50px 20px 20px;
+  background-color: #202020;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.footer .tiaokuan {
+  margin-bottom: 5px;
+}
+
+.footer .tiaokuan a {
+  font-size: 14px;
+  padding: 0 10px;
+  color: #ccc;
+}
+
+.footer .tiaokuan i {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.footer p {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 3px;
+  line-height: 1.3;
+}
+
+.footer p a {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer p:first-child {
+  padding-top: 10px;
+}
+
+.footer .footer-bottom {
+  width: 100%;
+}
+
+.footer .footer-bottom span {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 3px;
+}
+
+.footer .footer-bottom a {
+  color: rgba(255, 255, 255, 0.5);
+}
+/*# sourceMappingURL=xueguoxianjing.css.map */

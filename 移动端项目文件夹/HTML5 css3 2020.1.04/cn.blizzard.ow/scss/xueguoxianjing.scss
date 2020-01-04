@@ -1,0 +1,681 @@
+//图片三像素
+*img{
+    vertical-align: middle;
+  }
+// 清除浮动
+@mixin clerflex {
+    &:after,
+    &:before{
+        content: "";
+        display:table;
+    }
+    &:after{
+        clear: both;
+    }
+    &:after{
+      *zoom: 1;  
+    }
+}
+// 绝对定位垂直居中
+@mixin box-align($box-align-left:50%,$box-align-top:50%) {
+    position: absolute;
+    left: $box-align-left;
+    top: $box-align-top;
+    transform: translate(-50%,-50%);
+}
+//相对定位水平居中
+@mixin relative-align {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+// 文本居中
+@mixin text-align($box-height) {
+    text-align: center;
+    line-height: $box-height;
+}
+// 媒体查询
+@media screen and (width:768px){
+}
+
+body,html{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    // height: 100%;
+    // background-color: pink;
+    font-size: 10px;
+    // padding-bottom: 100px;
+}
+// 头部导航
+header{
+    position: absolute;
+    top: 0;
+    background-color: #fff;
+    height: 48px; 
+    width: 100%;
+    z-index: 1000;
+    @include clerflex;
+    &>a:nth-child(1){
+        float: left;
+        width: 48px;
+        height: 48px;
+        background-image: url(../upload/header_left.jpg);
+    }
+    &>a:nth-child(2){
+       @include box-align();
+       display: inline-block;
+       width: 36px;
+       height: 36px;
+       img{
+           width: 100%;
+           height: 100%;
+       }
+    }
+    &>a:nth-child(3){
+        float: right;
+        width: 48px;
+        height: 48px;
+        background-image: url(../upload/jingling.png);
+        background-position: -186px -267px;
+    }
+    // !!!头部隐藏栏-左
+    #header-leftbox{
+        // display: none;
+        position: fixed;
+        left: -320px;
+        top: 0;
+        overflow:scroll;
+        width: 100%;
+        max-width: 320px;
+        height: 100vh;
+        background-color: #2f3543;
+        z-index: 1000;
+        transition:all 0.2s;
+        // logo
+        img{
+            width: 100%;
+            padding: 25px;
+            box-sizing: border-box;
+        }
+        // 关闭按钮
+        #header-leftbox-guan{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 30px;
+            height: 30px;
+            background: url(../upload/header-leftbox-guan.jpg);
+            background-size: 100%;
+        }
+        // 按键列表
+        li{
+            
+            border-top: 1px solid #444a56;
+            a{
+                display: block;
+                padding: 18px 25px;
+                font-size: 16px;
+                color: #e0e1e3;
+            }
+        } 
+    }
+}
+// 底部按钮
+#header-leftbox-guan-button{
+    width: 100%;
+    margin-top: 5px;
+    box-sizing: border-box;
+    background-color: #f7931e;
+    color: #fff;
+    font-size: 20px;
+    padding:13px 0px; 
+    font-weight: 400;
+    border: 0;
+}
+.bottom-logo{
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    @include relative-align();
+    padding: 20px 0;
+    img{
+        width: 100%;
+        height: 100%;
+        padding: 0 !important;
+    }
+}
+// !!!右隐藏盒子
+#header-rightbox{
+    position: fixed;
+    top: 0;
+    right: -320px;
+    // 百分之90的可视窗口
+    width: 100%;
+    max-width: 320px;
+    height: 100vh;
+    overflow:scroll;
+    background-color: #151a23;
+    transition: all 0.2s;
+    // 关闭按钮
+    #header-rightbox-guan{
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        background-image: url(../upload/jingling.png);
+        background-position: -96px -125px;;
+        width: 23px;
+        height: 23px;
+        z-index: 2;
+    }
+    .logolink{
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 80px;
+        span{
+            display: inline-block;
+            width: 90px;
+            height: 40px;
+            background-image: url(../upload/jingling.png);
+            background-position: -18px -17px;
+            @include box-align()
+        }
+    }
+    // 登入按钮
+    .dengru-button{
+        padding: 20px 0;
+        width: 100%;
+        height: 40px;
+        border-top: 1px solid #252931;
+        background-color: #13171f;
+    }
+    button{
+        width: 90%;
+        height: 40px;
+        border: 0;
+        background-color: #0e86ca;
+        color: #fff;
+        font-size: 16px;
+        @include relative-align();
+        @include text-align(40px)
+    }
+    li{
+        border-top: 1px solid #252931;
+        a{
+            display: block;
+            height: 44px;
+            padding: 0px 25px;
+            font-size: 16px;
+            color: #b9bbbd;
+            line-height: 44px;
+        }
+    }
+}
+    .zhanghu{
+        width: 100%;
+        a{
+            display: block;
+            width: 100%;
+            height: 44px;
+            font-size: 16px;
+            color: #b9babc;
+            background-color: #13171f;
+            line-height: 44px;
+            border-top: 1px solid #252931;
+            span{
+                display: inline-block;
+                width: 24px;
+                height: 24px;
+                background: url(../upload/jingling.png) no-repeat;
+                background-position: -141px -72px ;
+                vertical-align: middle;
+                margin-left: 15px;
+            }
+        }
+    }
+    // 主体内容
+    main{
+        h2{
+            font-size: 31px;
+            text-align: center;
+            padding: 10px 0 25px;
+            font-style: italic;
+            color: #4b535d;
+        }
+        h4{
+            font-size: 18px;
+            font-weight: 700;
+            color: #4b535d;
+            text-align: center;
+            padding: 5px 0 ;
+        }
+        width: 100%;
+        background-color: #fff;
+        .top-img{
+            position: relative;
+            padding-top: 48px;
+            width: 100%;
+            img{
+                width: 100%;
+                // height: 100%;
+            }
+            a{
+                width: 56px;
+                height: 56px;
+                display: inline-block;
+                @include box-align(50%, 60%)
+            }
+        }
+        
+        .logo{
+            width: 100%;
+            padding: 30px 15px 20px;
+            box-sizing: border-box;
+            img{
+                width: 100%;
+            }
+            
+            button{
+                width: 100%;
+                border: 0;
+                padding: 10px 0 ;
+                text-align: center;
+                font-size: 16px;
+                font-weight: 700;
+                color: #fff;
+                background-color: #ff9c00;
+            }
+        }
+        // 解锁物品部分
+        .jiesuo{
+            width: 100%;
+            padding: 30px 15px;
+            box-sizing: border-box;
+            background-color: #f6f6f6;
+            
+            p{
+                font-size: 16px;
+                line-height: 1.6;
+                color: #212529;
+            }
+            button{
+                width: 100%;
+                border: 3px solid #ff9c00;
+                color: #ff9c00;
+                font-size: 16px;
+                font-weight: 700;
+                background-color: transparent;
+                padding: 7px 0;
+            }
+        }
+        // 冬季乱斗部分
+        .luandou{
+            width: 100%;
+            background: url(../upload/xueguo-background.jpg);
+            background-position: top center;
+            padding:10px 10px 20px;
+            box-sizing: border-box;
+        }
+        .luandou-moshi{
+            margin-bottom: 20px;
+        }
+        .moshi-centen{
+            position: relative;
+            width: 100%;
+            // height: 177px;
+            background: url(../upload/xueguo-1.jpg);
+            padding-top: 50%;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            span{
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                font-size: 13px;
+                border: 2px solid #e79b2a;
+                background-color: #293a51;
+                color: #ffe30b;
+                padding: 3px;
+            }
+        }
+        .moshi-text{
+            padding: 25px;
+            background-color: #fff;
+            p{
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        }
+    }
+    // 物品预览部分
+    .wupin{
+        width: 100%;
+        .wupin-img{
+            width: 100%;
+            background: url(../upload/xueguo-wupin1.jpg);
+            background-size: 150%;
+            background-position: top center;
+            box-sizing: border-box;
+            padding-top: 55%;
+        }
+        .tiaozhan{
+            padding: 10px;
+            padding-top: 30px;
+            &>h4{
+                padding: 0;
+                color: #539ee9;
+            }
+            h2{
+                padding-bottom:10px ;
+            }
+            p{
+                font-size: 14px;
+                line-height: 1.5;
+            }
+        }
+    }
+    .tiaozhan-ri{
+        position: relative;
+        width: 100%;
+        padding: 10px 0;
+        .time{
+            padding-top: 30px;
+            h4{
+                display: inline-block;
+                padding-left: 20px;
+               @include relative-align();
+            }
+            span{
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: inline-block;
+                width: 18px;
+                height: 18px;
+                background: url(../upload/clock.png);
+            }
+            p{
+                text-align: center;
+            }
+        }
+        
+    }
+    .wupin-shu{
+        .wupin-shu-ol{
+            // display: inline-block;
+            margin: 25px 0;
+            @include relative-align();
+            img{
+                width: 120px;
+                height: 120px;
+                @include relative-align()
+            }
+            p{
+                text-align: center;
+            }
+        }
+    }
+.xiala{
+    position: relative;
+    padding: 8px 12px;
+    background-color: #f2f2f2;
+    span{
+        font-size: 16px;
+        font-weight: 700;
+        color: #4a4a4a;
+    }
+    i{
+        position: absolute;
+        top:30%;
+        transform: translateY(-50%);
+        transform: rotate(224deg);
+        transition: all 0.2s;
+        right: 5%;
+        width: 10px;
+        height: 10px;
+        border-left: 2px solid #666666;
+        border-top: 2px solid #666666;
+        box-sizing: border-box;
+    }
+}
+// 奖励物品总览部分
+.jiangli{
+    width: 100%;
+    padding: 20px 10px;
+    background: url(../upload/jiangli-background.jpg);
+    background-position: top center;
+    box-sizing: border-box;
+    overflow: hidden;
+    h2{
+        color: #ffffff;
+        padding-bottom: 10px;
+    }
+    &>h4{
+        position: relative;
+        text-align: left;
+        padding-left:30px;
+        color: #fff;
+        font-weight: 400;
+        b{
+            color: #dc931d;
+            text-decoration:underline
+        }
+        span{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            width: 21px;
+            height: 21px;
+            background: url(../upload/xuehua.png) no-repeat;
+            background-size: cover;
+        }
+    }
+    .xiala{
+        width: 75%;
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+}
+.lunbo-centen{
+    display: -webkit-box;
+    width: 100%;
+    height: 160px;
+    padding: 10px 0;
+    overflow: scroll;
+    overflow-X: visible;
+    padding-left: 10px;
+    // overflow:hidden;
+   
+    div{
+        width: 250px;
+        height: 140px;
+        
+    }
+    a{
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        border-radius: 4px;
+    }
+    span{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;   
+        font-size: 14px;
+        line-height: 14px;
+        font-weight: 700;
+        text-align: center;
+        padding: 10px 0;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+        color: #ff9c00;
+    }
+    &>div:first-child{
+        padding-left: 0;
+    }
+    i{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 13px;
+        border: 2px solid #e79b2a;
+        background-color: #293a51;
+        color: #ffe30b;
+        padding: 3px;
+    }
+    b{
+        width: 100%;
+        height: 100%;
+        background: url(../upload/bofang1.png);
+        background-repeat: no-repeat;
+        background-position:center center;
+        background-size: 13%;
+        @include box-align(50%, 50%)
+    }
+}
+
+.lunbo{
+    width: 100%;
+    overflow: hidden;
+    h4{
+        color: #fff;
+        text-align: left;
+        padding-left: 10px;
+    }
+    &>.lunbo-centen:first-child{
+        padding-left: 0;
+    }
+}
+// 物品奖励总览结束
+// 礼物部分
+.liwu{
+    background-color: #fff;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    img{
+        width: 100%;
+    }
+    .liwu-text{
+        width: 100%;
+        p{
+            font-size: 14px;
+            line-height: 1.3;
+            text-align: center;
+        }
+        h2{
+            padding: 20px 0 10px;
+        }
+        button{
+            width: 100%;
+            border: 0;
+            padding: 10px 0 ;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 700;
+            color: #fff;
+            background-color: #ff9c00;
+            margin: 15px 0 10px;
+        }
+    }
+}
+// 底部分享
+.main-fenxiang{
+    border-top: 1px solid #2c2d2e;
+    border-bottom: 1px solid #2c2d2e;
+    width: 100%;
+    margin: 30px 0 0px 0;
+    background-color: #141516;
+    @include clerflex();
+    span{
+        float: right;
+        line-height: 64px;
+        font-size: 16px;
+        color: #ffffff;
+    }
+    a{
+        // display: inline-block;
+        position: relative;
+        bottom: 50%;
+        transform: translateY(50%);
+
+        float: right;
+        width: 36px;
+        height: 32px;
+        background: url(../upload/fenxiang.png);
+        background-position: -3px -4px;
+        line-height: 64px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // 底部条款
+.footer{
+    width: 100%;
+    padding: 50px 20px 20px ;
+    background-color: #202020;
+    box-sizing: border-box;
+    .tiaokuan{
+        margin-bottom: 5px;
+        a{
+            font-size: 14px;
+            padding: 0 10px;
+            color: #ccc;
+        }
+        i{
+            font-size: 14px;
+            color: #ccc;
+        }
+    }
+    p{
+        font-size: 12px;
+        color: rgba(255,255,255,.5);
+        margin-bottom: 3px;
+        line-height: 1.3;
+        a{
+            color: rgba(255,255,255,.5);
+        }
+    }
+    & p:first-child{
+        padding-top: 10px;
+    }
+    .footer-bottom{
+        width: 100%;
+        span{
+            font-size: 12px;
+            color: rgba(255,255,255,.5);
+            margin-bottom: 3px;
+        }
+        a{
+            color: rgba(255,255,255,.5);
+        }
+    }
+}
