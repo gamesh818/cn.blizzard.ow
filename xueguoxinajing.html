@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/normalize.css">
+    <link rel="stylesheet" href="./css/xueguoxianjing.css">
+    <link rel="shortcut icon" href="ow.ico" type="image/x-icon">
+</head>
+<body id="body">
+    <!-- 顶部导航 -->
+    <header>
+        <a href="javascript:void(0);" id="header-leftbox-kai"></a> 
+        <a href="./index.html"><img src="./upload/header_cent.png" alt=""></a>
+        <a href="javascript:void(0);" id="header-rightbox-kai"></a>
+        <!-- 左隐藏盒子 -->
+        <div id="header-leftbox">
+            <img src="./upload/top_nav_img.png" alt="">
+            <!-- 关闭按钮 -->
+            <div id="header-leftbox-guan"></div>
+            <ul>
+                <li><a href="">首页</a></li>
+                <li><a href="">游戏</a></li>
+                <li><a href="">英雄</a></li>
+                <li><a href="">活动</a></li>
+                <li><a href="">视频图片</a></li>
+                <li><a href="">新闻</a></li>
+                <li><a href="">下载</a></li>
+                <li><a href="">电子竞技</a></li>
+                <li><a href="">社区</a></li>
+            </ul>
+            <button id="header-leftbox-guan-button">立即购买</button>
+            <div class="bottom-logo">
+                <img src="./upload/bottom-logo.png" alt="">
+            </div>
+        </div>
+        <!-- 右隐藏盒子 -->
+        <div id="header-rightbox">
+            <div id="header-rightbox-guan"></div>
+            <a href="./index.html" class="logolink"><span></span></a>
+            <div class="dengru-button"><button>登录</button></div>
+            <div class="zhanghu">
+                <a href=""><span></span> 支持</a>
+                <a href=""><span></span> 账户</a>
+                <a href=""><span></span> 注册</a>
+            </div>
+            <ul>
+                <li><a href="">首页</a> </li>
+                <li><a href="">游戏</a> </li>
+                <li><a href="">商城</a> </li>
+                <li><a href="">新闻</a> </li>
+                <li><a href="">电子竞技</a> </li>
+                <li><a href="">暴雪嘉年华</a> </li>
+            </ul>
+        </div>
+    </header>
+    <!-- 顶部隐藏盒子js -->
+    <script>
+        // 左盒子
+   var leftBox=document.getElementById("header-leftbox")
+        // 左盒子关闭按钮
+   var leftBoxGuanbi=document.getElementById("header-leftbox-guan")
+        // 左盒子开启按钮
+   var leftBoxKaiqi=document.getElementById("header-leftbox-kai")
+        // 右盒子
+   var rightBox=document.getElementById("header-rightbox")
+        // 右盒子关闭按钮
+   var rightBoxGuanbi=document.getElementById("header-rightbox-guan")
+        // 右盒子按钮
+   var rightBoxKaiqi=document.getElementById("header-rightbox-kai")
+   var body=document.getElementById("body")
+   leftBoxKaiqi.onclick =function() {
+    leftBox.style.left="0"
+    rightBox.style.right="-320px"
+    body.style.overflow="hidden"
+    // rightBox.style.display = "none"
+   }
+   leftBoxGuanbi.onclick=function(){
+    // leftBox.style.display= "none"
+    leftBox.style.left="-320px"
+    body.style.overflow="visible"
+   }
+   
+   rightBoxKaiqi.onclick =function() {
+    rightBox.style.right="0"
+    leftBox.style.left="-320px"
+    body.style.overflow="hidden"
+    // rightBox.style.display = "none"
+   }
+   rightBoxGuanbi.onclick=function(){
+       rightBox.style.right="-320px"
+       body.style.overflow="visible"
+   }
+    </script>
+    <!-- 顶部导航结束 -->
+    <!-- 主体部分 -->
+<main>
+    <!-- 顶部图片 -->
+    <div class="top-img">
+        <img src="./upload/xueguo-top-img.jpg" alt="">   
+            <a href=""><img src="./upload/bofang.png" alt=""></a>
+    </div>
+    <!-- logo部分 -->
+    <div class="logo">
+        <img src="./upload/xueguoxianjing-logo.png" alt="">
+        <h2>12月11日至1月3日</h2>
+        <button>购买游戏货币（赠送补给）</button>
+    </div>
+    <hr>
+    <!-- 解锁物品title -->
+    <div class="jiesuo">
+        <h4>趣味满满的冬季！</h4>
+        <p>穿上你的假日毛衣，在雪国仙境节日活动中欢庆这个一年当中最为喜悦的时刻吧！获得全新物品，赢取游戏奖励，在节日主题地图中漫游雪域。除了再度回归的雪域狩猎和雪球攻势之外，我们还为今年的庆典添加了全新的游戏模式：雪球死斗！</p>
+        <button>查看可解锁的物品</button>
+    </div>
+    <!-- 冬季乱斗 -->
+    <div class="luandou">
+        <h4>冬季乱斗</h4>
+        <h2>加入这场狂欢吧</h2>
+        <!-- 第一部分 -->
+        <div class="luandou-moshi">
+            <div class="moshi-centen">
+                <span>全新</span>
+            </div>
+            <div class="moshi-text">
+                <h4>雪球死斗</h4>
+                <p>
+                    在这场自由混战的8人乱斗中，玩家可以在美的冲击枪中储存三枚致命的雪球，以便在重新装填前获得更多冰冻赛场的机会。在这场雪域混战中证明你的价值，即可赢得三个全新成就，并解锁特殊喷漆。
+                </p>
+            </div>
+        </div>
+        <!-- 第二部分 -->
+        <div class="luandou-moshi">
+            <div class="moshi-centen" style="background: url(./upload/xueguo-2.jpg)  no-repeat; background-size:100%;">
+            </div>
+            <div class="moshi-text">
+                <h4>雪球攻势</h4>
+                <p>
+                    准备好在6v6乱斗中冷冻你的敌人吧！所有玩家都将化身为美，而美的冰霜冲击枪则被改为发射单发的超强雪球，只要击中敌人即可将其消灭，但如果没有击中那可就麻烦了！
+                </p>
+            </div>
+        </div>
+        <!-- 第三部分 -->
+        <div class="luandou-moshi">
+            <div class="moshi-centen" style="background: url(./upload/xueguo-3.jpg)  no-repeat; background-size:100%;">
+            </div>
+            <div class="moshi-text">
+                <h4>雪域狩猎</h4>
+                <p>
+                    在这场6人乱斗中，五名使用美的玩家将与一名使用雪人的玩家战斗，雪人可以使用温斯顿的技能。雪人玩家必须尽可能久地存活，要么干掉身为敌人的小美们，要么倒在她们的攻势之下。哪一方能在雪域中最终胜出呢？
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- 物品部分 -->
+    <div class="wupin">
+        <div class="wupin-img"></div>
+        <div class="tiaozhan">
+            <h4>每周挑战</h4>
+            <h2>玩游戏，赢奖励</h2>
+            <p>在快速游戏、竞技比赛或街机先锋中解锁喷漆、头像和假日毛衣“士兵：76”、圣诞树莫伊拉、冰雪天使“天使”等节日皮肤。每周都将有全新的奖励等你来拿！</p>
+            <div class="tiaozhan-ri">
+                <div class="xiala">
+                    <span>第1周</span>
+                    <i></i>
+                </div>
+                <div class="time"> 
+                    <h4>12月11日至12月18日<span></span></h4>
+                    <p>（地区时间可能有所不同）</p>
+                </div>
+                <div class="wupin-shu">
+                    <div class="wupin-shu-ol">
+                        <img src="./upload/wupin-ol1.jpg" alt="">
+                        <h4>赢得3场游戏</h4>
+                        <p>假日毛衣“士兵：76”头<br> 像
+                        </p>
+                    </div>
+                    <div class="wupin-shu-ol">
+                        <img src="./upload/wupin-ol2.jpg" alt="">
+                        <h4>赢得6场游戏</h4>
+                        <p>假日毛衣“士兵：76”喷<br> 漆
+                        </p>
+                    </div>
+                    <div class="wupin-shu-ol">
+                        <img src="./upload/wupin-ol3.jpg" alt="">
+                        <h4>赢得9场游戏</h4>
+                        <p>假日毛衣“士兵：76”皮<br> 肤
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- 物品结束 -->
+<!-- 主体物品奖励总览 -->
+    <div class="jiangli">
+        <h2>冬季主题皮肤等丰厚奖励</h2>
+        <div class="xiala">
+            <span>全部</span>
+            <i></i>
+        </div>
+        <h4><span></span>= 只能通过<b>每周挑战</b> 获得</h4>
+        <div class="jiangli-all">
+            <div class="lunbo">     
+                <h4>皮肤(5)</h4>
+                <hr>
+                <div class="lunbo-centen">                     
+                    <div class="lunbo-centen">
+                    <div>
+                        <a href="">
+                            <img src="./upload/lunbo-pifu1.jpg" alt="">
+                            <span>冰雪巨人</span>
+                            <i>全新</i>
+                        </a>
+                    </div>
+                </div>
+                <div class="lunbo-centen">
+                    <div>
+                        <a href="">
+                            <img src="./upload/lunbo-pifu2.jpg" alt="">
+                            <span>山地老人</span>
+                            <i>全新</i>
+                        </a>
+                        
+                    </div>
+                </div>
+                <div class="lunbo-centen">
+                    <div>
+                        <a href="">
+                            <img src="./upload/lunbo-pifu3.jpg" alt="">
+                            <span>老鼠国王</span>
+                            <i>全新</i>
+                        </a>
+                    </div>
+                </div>
+                <div class="lunbo-centen">
+                    <div>
+                        <a href="">
+                            <img src="./upload/lunbo-pifu4.jpg" alt="">
+                            <span>冰霜化身</span>
+                            <i>全新</i>
+                        </a>
+                    </div>
+                </div>
+                <div class="lunbo-centen">
+                    <div>
+                        <a href="">
+                            <img src="./upload/lunbo-pifu5.jpg" alt="">
+                            <span>圣诞树</span>
+                            <i>全新</i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <h4>表情(5)</h4>
+                <hr>
+                <div class="lunbo-centen">                     
+                    <div class="lunbo-centen">
+                    <div>
+                        <a href="">
+                            <img src="./upload/biaoqing1.jpg" alt="">
+                            <span>自我介绍</span>
+                            <i>全新</i>
+                            <b></b>
+                        </a>
+                    </div>
+                </div>
+                <div class="lunbo-centen">
+                    <div>
+                        <a href="">
+                            <img src="./upload/biaoqing2.jpg" alt="">
+                            <span>岂有此礼</span>
+                            <i>全新</i>
+                            <b></b>
+                        </a>
+                        
+                    </div>
+                </div>
+                <div class="lunbo-centen">
+                    <div>
+                        <a href="">
+                            <img src="./upload/biaoqing3.jpg" alt="">
+                            <span>我的宝贝</span>
+                            <i>全新</i>
+                            <b></b>
+                        </a>
+                    </div>
+                </div>
+                <div class="lunbo-centen">
+                    <div>
+                        <a href="">
+                            <img src="./upload/biaoqing4.jpg" alt="">
+                            <span>剪纸</span>
+                            <i>全新</i>
+                            <b></b>
+                        </a>
+                    </div>
+                </div>
+                <div class="lunbo-centen">
+                    <div>
+                        <a href="">
+                            <img src="./upload/biaoqing5.jpg" alt="">
+                            <span>小狗</span>
+                            <i>全新</i>
+                            <b></b>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <h4>特写(5)</h4>
+                <hr>
+                <div class="lunbo-centen">                     
+                    <div class="lunbo-centen">
+                    <div>
+                        <a href="">
+                            <img src="./upload/texie1.jpg" alt="">
+                            <span>节日灯光</span>
+                            <i>全新</i>
+                            <b></b>
+                        </a>
+                    </div>
+                </div>
+                <div class="lunbo-centen">
+                    <div>
+                        <a href="">
+                            <img src="./upload/texie2.jpg" alt="">
+                            <span>节日快乐</span>
+                            <i>全新</i>
+                            <b></b>
+                        </a>
+                        
+                    </div>
+                </div>
+                <div class="lunbo-centen">
+                    <div>
+                        <a href="">
+                            <img src="./upload/texie3.jpg" alt="">
+                            <span>雪球大战</span>
+                            <i>全新</i>
+                            <b></b>
+                        </a>
+                    </div>
+                </div>
+                <div class="lunbo-centen">
+                    <div>
+                        <a href="">
+                            <img src="./upload/texie4.jpg" alt="">
+                            <span>漫天雪花</span>
+                            <i>全新</i>
+                            <b></b>
+                        </a>
+                    </div>
+                </div>
+                <div class="lunbo-centen">
+                    <div>
+                        <a href="">
+                            <img src="./upload/texie5.jpg" alt="">
+                            <span>榭寄生下</span>
+                            <i>全新</i>
+                            <b></b>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- 物品奖励总览结束 -->
+    <!-- 礼物部分 -->
+    <div class="liwu">
+        <img src="./upload/liwu.jpg" alt="">
+        <div class="liwu-text">
+            <h2>
+                收集全新礼物
+            </h2>
+            <p>圣诞补给箱里塞满了皮肤、表情、特写、头像、喷漆、语音等全新的节日物品。你还可以用游戏货币以折扣价格购买在去年活动中错过的道具。别犹豫得太久，这些补给仅限在节日期间可以获得。</p>
+            <button>购买游戏货币（赠送补给）</button>
+        </div>
+    </div>
+
+
+
+
+
+</main>
+
+
+
+
+
+    <!-- 底部条款 -->
+    <footer class="footer">
+        <div class="tiaokuan">
+        <a href="">隐私</a><i>|</i>
+        <a href="">法律条款</a><i>|</i>
+        <a href="">API</a>
+        </div>
+        <p>
+            ©2019 暴雪娱乐有限公司版权所有 由上海网之易网络科技发展有限公司运营 <a href=""> 著作权侵权</a> | 
+            新广出审[2016]378号        </p>
+        <p>文网游进字[2016]0025号  |  <a href="">沪网文号〔2017〕9633-727号</a> |  <a href="">增值电信业务经营许可证编号：沪B2－20080012</a> | 
+        <a href="">沪ICP备：沪B2－20080012</a></p>
+        <p>互联网违法和不良信息举报电话：0571-28090163 沪公网安备 31011502022167号 | <a href="">上海市网络游戏行业自律公约</a></p>
+        <div class="footer-bottom" >
+            <img src="./upload/foot-tiaokuan1.png" alt="">
+            <img src="./upload/foot-tiaokuan2.png" alt="">
+            <img src="./upload/foot-tiaokuan3.png" alt="">
+            <img src="./upload/foot-tiaokuan4.png" alt="">
+            <img src="./upload/foot-tiaokuan5.png" alt="">
+            <span>|  适龄提示：适合13岁及以上使用 <a href="">家长监护工程></a> </span>
+        </div>
+    </footer>
+
+    <script src="./js/flexible.debug.js"></script>
+    <script src="./js/flexible_css.debug.js"></script>
+
+</body>
+</html>
